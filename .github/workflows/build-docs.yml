@@ -23,8 +23,10 @@ jobs:
           ${{ runner.os }}-pip-
     - name: Install Pipenv
       run: pip install pipenv
+    - name: Install Dependencies
+      run: pipenv install
     - name: Build Site
-      run: pipenv install && pipenv run build
+      run: pipenv run build
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@2.0.0
       env:

@@ -25,5 +25,7 @@ jobs:
           ${{ runner.os }}-pip-
     - name: Install Pipenv
       run: pip install pipenv
+    - name: Install Dependencies
+      run: pipenv install
     - name: Check Docs Source Update
-      run: pipenv install && pipenv run updchck
+      run: pipenv run updchck
