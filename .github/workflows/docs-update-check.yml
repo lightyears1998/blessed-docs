@@ -8,7 +8,7 @@ on:
     - cron: "0 8 * * *"
 
 jobs:
-  build:
+  updchck:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
