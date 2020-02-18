@@ -1,4 +1,4 @@
 - enable: true
   name: blessed
   uri: https://raw.githubusercontent.com/chjj/blessed/{commit-id}/README.md
-  commit-id-of-last-update: b7c5f0f2f2df151e8c583e6996198c5db93cd0a3
+  commit-id-of-last-update: 10edaa088bf239b8dbfac363cb757ac6941c9a90
