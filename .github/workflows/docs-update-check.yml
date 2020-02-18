@@ -1,9 +1,10 @@
-name: Build Docs
+name: Docs Update Check
 
 on:
   push:
     branches:
     - master
+  schedule: "0 8 * * *"
 
 jobs:
   build:
@@ -23,11 +24,5 @@ jobs:
           ${{ runner.os }}-pip-
     - name: Install Pipenv
       run: pip install pipenv
-    - name: Build Site
-      run: pipenv install && pipenv run build
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@2.0.0
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: site
+    - name: Check Docs Source Update
+      run: pipenv install && pipenv run updchck

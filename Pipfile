@@ -3,6 +3,11 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
+[[source]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+verify_ssl = true
+name = "tuna"
+
 [dev-packages]
 
 [packages]
@@ -12,6 +17,13 @@ mkdocs = "*"
 mkdocs-material = "*"
 mkdocs-minify-plugin = "*"
 mkdocs-git-revision-date-localized-plugin = "*"
+pyyaml = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"
+
+[scripts]
+serve = "mkdocs serve"
+build = "mkdocs build -d site"
+updchck = "python docs-source-updchck.py"
