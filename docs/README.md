@@ -30,10 +30,19 @@ Blessed has been used to implement other popular libraries and programs.
 Examples include: the [slap text editor][slap] and [blessed-contrib][contrib].
 The blessed API itself has gone on to inspire [termui][termui] for Go.
 
+[slap]: https://github.com/slap-editor/slap
+[contrib]: https://github.com/yaronn/blessed-contrib
+[termui]: https://github.com/gizak/termui
+[urwid]: http://urwid.org/reference/index.html
+[curses-ui]: http://search.cpan.org/~mdxi/Curses-UI-0.9609/lib/Curses/UI.pm
+
 ## Install
 
 ``` bash
-$ npm install blessed
+npm install blessed
+
+# TypeScript
+npm install @types/blessed
 ```
 
 ## Example
@@ -119,95 +128,12 @@ box.focus();
 screen.render();
 ```
 
-## Documentation
-
-### Widgets
-
-- [Base Nodes](#base-nodes)
-  - [Node](#node-from-eventemitter) (abstract)
-  - [Screen](#screen-from-node)
-  - [Element](#element-from-node) (abstract)
-- [Boxes](#boxes)
-  - [Box](#box-from-element)
-  - [Text](#text-from-element)
-  - [Line](#line-from-box)
-  - [ScrollableBox](#scrollablebox-from-box) (deprecated)
-  - [ScrollableText](#scrollabletext-from-scrollablebox) (deprecated)
-  - [BigText](#bigtext-from-box)
-- [Lists](#lists)
-  - [List](#list-from-box)
-  - [FileManager](#filemanager-from-list)
-  - [ListTable](#listtable-from-list)
-  - [Listbar](#listbar-from-box)
-- [Forms](#forms)
-  - [Form](#form-from-box)
-  - [Input](#input-from-box) (abstract)
-  - [Textarea](#textarea-from-input)
-  - [Textbox](#textbox-from-textarea)
-  - [Button](#button-from-input)
-  - [Checkbox](#checkbox-from-input)
-  - [RadioSet](#radioset-from-box)
-  - [RadioButton](#radiobutton-from-checkbox)
-- [Prompts](#prompts)
-  - [Prompt](#prompt-from-box)
-  - [Question](#question-from-box)
-  - [Message](#message-from-box)
-  - [Loading](#loading-from-box)
-- [Data Display](#data-display)
-  - [ProgressBar](#progressbar-from-input)
-  - [Log](#log-from-scrollabletext)
-  - [Table](#table-from-box)
-- [Special Elements](#special-elements)
-  - [Terminal](#terminal-from-box)
-  - [Image](#image-from-box)
-  - [ANSIImage](#ansiimage-from-box)
-  - [OverlayImage](#overlayimage-from-box)
-  - [Video](#video-from-box)
-  - [Layout](#layout-from-element)
-
-### Other
-
-- [Helpers](#helpers)
-
-### Mechanics
-
-- [Content & Tags](#content--tags)
-  - [Colors](#colors)
-  - [Attributes](#attributes)
-  - [Alignment](#alignment)
-  - [Escaping](#escaping)
-  - [SGR Sequences](#sgr-sequences)
-- [Style](#style)
-  - [Colors](#colors-1)
-  - [Attributes](#attributes-1)
-  - [Transparency](#transparency)
-  - [Shadow](#shadow)
-  - [Effects](#effects)
-- [Events](#events)
-  - [Event Bubbling](#event-bubbling)
-- [Poisitioning](#positioning)
-- [Rendering](#rendering)
-- [Artificial Cursors](#artificial-cursors)
-- [Multiple Screens](#multiple-screens)
-- [Server Side Usage](#server-side-usage)
-
-### Notes
-
-- [Windows Compatibility](#windows-compatibility)
-- [Low-level Usage](#low-level-usage)
-- [Testing](#testing)
-- [Examples](#examples)
-- [FAQ](#faq)
-
-
 ## Widgets
 
 Blessed comes with a number of high-level widgets so you can avoid all the
 nasty low-level terminal stuff.
 
-
 ### Base Nodes
-
 
 #### Node (from EventEmitter)
 
@@ -303,13 +229,16 @@ The screen on which every other node renders.
 - __dockBorders__ - Automatically "dock" borders with other elements instead of
   overlapping, depending on position (__experimental__). For example:
   These border-overlapped elements:
-```
+
+```txt
 ┌─────────┌─────────┐
 │ box1    │ box2    │
 └─────────└─────────┘
 ```
+
   Become:
-```
+
+```txt
 ┌─────────┬─────────┐
 │ box1    │ box2    │
 └─────────┴─────────┘
@@ -784,6 +713,8 @@ font.
 - __fontBold__ - bdf->json bold font file to use (see [ttystudio][ttystudio]
   for instructions on compiling BDFs to JSON).
 - __fch__ - foreground character. (default: `' '`)
+
+[ttystudio]: https://github.com/chjj/ttystudio#choosing-a-new-font-for-your-terminal-recording
 
 ##### Properties:
 
@@ -2369,26 +2300,6 @@ Examples can be found in `examples/`.
     - Python: [Urwid][urwid]
     - Go: [termui][termui] & [termbox-go][termbox]
 
-
-## Contribution and License Agreement
-
-If you contribute code to this project, you are implicitly allowing your code
-to be distributed under the MIT license. You are also implicitly verifying that
-all code is your original work. `</legalese>`
-
-
-## License
-
-Copyright (c) 2013-2015, Christopher Jeffrey. (MIT License)
-
-See LICENSE for more info.
-
-[slap]: https://github.com/slap-editor/slap
-[contrib]: https://github.com/yaronn/blessed-contrib
-[termui]: https://github.com/gizak/termui
 [curses]: https://en.wikipedia.org/wiki/Curses_(programming_library)
 [ncurses]: https://en.wikipedia.org/wiki/Ncurses
-[urwid]: http://urwid.org/reference/index.html
-[curses-ui]: http://search.cpan.org/~mdxi/Curses-UI-0.9609/lib/Curses/UI.pm
 [termbox]: https://github.com/nsf/termbox-go
-[ttystudio]: https://github.com/chjj/ttystudio#choosing-a-new-font-for-your-terminal-recording
