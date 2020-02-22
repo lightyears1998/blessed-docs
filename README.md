@@ -4,5 +4,5 @@
 
 Please note that this is NOT an *official* repo for blessed document.
 
-[chjj/Blessed](https://github.com/chjj/blessed) has its own documentation in its [README.md](https://github.com/chjj/blessed/blob/10edaa088bf239b8dbfac363cb757ac6941c9a90/README.md#documentation),
-based on which I build this document site for better reading experience.
+Both [chjj/Blessed](https://github.com/chjj/blessed) and [yaronn/blessed-contrib](https://github.com/yaronn/blessed-contrib) place documentation in each project's `README.md` file,
+based on which I build site just for better reading experience.
