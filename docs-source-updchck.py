@@ -9,9 +9,9 @@ sources = yaml.safe_load(open("./docs-source.yml", encoding="utf8").read())
 all_source_is_up_to_date = True
 for source in sources:
     if source['enable']:
-        uri = source['uri']
-        docs_master = requests.get(uri.replace('{commit-id}', 'master')).text
-        docs_last_update = requests.get(uri.replace('{commit-id}', source['commit-id-of-last-update'])).text
+        docs_uri = source['docs_uri']
+        docs_master = requests.get(docs_uri.replace('{commit-id}', 'master')).text
+        docs_last_update = requests.get(docs_uri.replace('{commit-id}', source['commit-id-of-last-update'])).text
         if docs_master != docs_last_update:
             print(f'docs of {source["name"]} is outdated.')
             all_source_is_up_to_date = False

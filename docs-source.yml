@@ -1,8 +1,10 @@
 - enable: true
   name: blessed
-  uri: https://raw.githubusercontent.com/chjj/blessed/{commit-id}/README.md
+  uri: https://github.com/chjj/blessed
+  docs_uri: https://raw.githubusercontent.com/chjj/blessed/{commit-id}/README.md
   commit-id-of-last-update: 10edaa088bf239b8dbfac363cb757ac6941c9a90
 - enable: true
   name: blessed-contrib
-  uri: https://raw.githubusercontent.com/yaronn/blessed-contrib/{commit-id}/README.md
+  uri: https://github.com/yaronn/blessed-contrib
+  docs_uri: https://raw.githubusercontent.com/yaronn/blessed-contrib/{commit-id}/README.md
   commit-id-of-last-update: 555163ff8d034687d3964447e67cbd40aea4f6b7
