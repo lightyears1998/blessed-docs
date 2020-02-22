@@ -27,4 +27,4 @@
    line.setData([series1, series2])
 `````
 
-**Examples:** [simple line chart](./examples/line-fraction.js), [multiple lines](./examples/multi-line-chart.js), [256 colors](./examples/line-random-colors.js)
+**Examples:** [simple line chart](https://github.com/yaronn/blessed-contrib/blob/master/examples/line-fraction.js), [multiple lines](https://github.com/yaronn/blessed-contrib/blob/master/examples/multi-line-chart.js), [256 colors](https://github.com/yaronn/blessed-contrib/blob/master/examples/line-random-colors.js)
