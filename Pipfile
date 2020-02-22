@@ -26,5 +26,5 @@ python_version = "3.8"
 [scripts]
 serve = "mkdocs serve"
 prebuild = "python generate-README.py"
-build = "mkdocs build -d site"
+build = "mkdocs build -d site --strict"
 updchck = "python docs-source-updchck.py"
